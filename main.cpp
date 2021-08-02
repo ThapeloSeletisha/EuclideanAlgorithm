@@ -1,5 +1,8 @@
 #include <iostream>
+#include <algorithm>
+
 using namespace std;
+
 
 // Calculates the greatest common divisor of 2 numbers
 // args: 
@@ -36,4 +39,33 @@ int main()
          << endl;
     
     return 0;
+}
+
+int gcd(int m, int n)
+{
+    // If one of the numbers divides the other
+    // return the one that divides the other
+    if (n % m == 0 ||
+        m % n == 0)
+    {
+        return min(m, n);
+    } 
+    // Else use the euclidean algorithm
+    else 
+    {
+        //Set up the variables
+        int dividend = m;
+        int divisor = n;
+        int remainder = 0;
+        int result;
+        //Apply the Euclidean Algorithm
+        do {
+            result = remainder;
+            remainder = dividend % divisor;
+            dividend = divisor;
+            divisor = remainder;
+        } while (remainder != 0);
+
+        return result;
+    }   
 }
