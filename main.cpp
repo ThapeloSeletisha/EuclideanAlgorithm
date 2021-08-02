@@ -6,7 +6,7 @@ using namespace std;
 //     the 2 numbers numbers in question
 // returns:
 //     the greatest common divisor of the 2 numbers
-unsigned int gcd(unsigned int m, unsigned int n);
+int gcd(int m, int n);
 
 int main()
 {
@@ -15,7 +15,7 @@ int main()
          << endl;
     
     //defines the varables that will store the useer input
-    unsigned int num1, num2;
+    int num1, num2;
 
     //Prompt user to enter 2 numbers and store them
     cout << "Enter the first number:" << endl;
@@ -24,7 +24,7 @@ int main()
     cin >> num2;
 
     //Calculates the greatest common factor of the users 2 numbers
-    unsigned int result = gcd(num1, num2);
+    int result = gcd(num1, num2);
 
     //Print the result to the terminal
     cout << "The greatest common divisor(gcd) of "
